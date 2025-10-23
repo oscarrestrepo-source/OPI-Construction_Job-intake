@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OPI Construction — Contact Form</title>
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f6f7f9;color:#222}
+    .wrap{max-width:900px;margin:32px auto;padding:16px}
+    .card{background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:24px}
+    h1{margin:0 0 8px;font-size:28px}
+    p.lead{margin:0 0 20px;color:#555}
+    iframe{width:100%;min-height:780px;border:0;background:transparent;display:block}
+    header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+    .brand{height:28px;width:28px;border-radius:6px;background:#E16C09}
+    footer{margin-top:12px;font-size:12px;color:#666;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <span class="brand"></span>
+        <h1>OPI Construction</h1>
+      </header>
+      <p class="lead">Please complete the form below to start your project inquiry.</p>
+
+      <!-- Buildertrend Contact Form (exact embed) -->
+      <script async src="https://buildertrend.net/leads/contactforms/js/btClientContactForm.js"></script>
+      <iframe
+        id="btIframe"
+        title="OPI Contact Form (Buildertrend)"
+        src="https://buildertrend.net/leads/contactforms/ContactFormFrame.aspx?builderID=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJidWlsZGVySWQiOjEwOTAxM30.dRrmKk1eq_W7Qqzn0GVUm0fqFfCxk_zEvWImyX7BNzU"
+        loading="lazy"
+        scrolling="no">
+      </iframe>
+      <!-- /Buildertrend Contact Form -->
+
+      <footer>© OPI Construction</footer>
+    </div>
+  </div>
+</body>
+</html>
