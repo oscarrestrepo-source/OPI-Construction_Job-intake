@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OPI Intake — Mike</title>
+<link rel="icon" href="./opi-logo.png" type="image/png" />
+<style>
+  :root{--opi-orange:#E16C09;--gray:#555;--bg:#f6f7f9;--card:#fff;--bd:#e9eaee}
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222}
+  .wrap{max-width:900px;margin:24px auto;padding:16px}
+  header{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--bd);border-radius:12px;padding:10px 16px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  header img{height:36px}
+  header a{color:var(--opi-orange);text-decoration:none;font-weight:600}
+  .accent{height:4px;width:84px;background:var(--opi-orange);border-radius:3px;margin:12px auto 18px}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.08);padding:clamp(16px,3.5vw,28px)}
+  h1{margin:0 0 6px;text-align:center;color:var(--opi-orange)}
+  p.lead{margin:0 0 18px;text-align:center;color:var(--gray)}
+  .form-shell{border:1px solid var(--bd);border-radius:12px;overflow:hidden;background:#fff}
+  iframe{width:100%;min-height:1100px;border:0;display:block;background:transparent}
+  footer{margin:18px auto 28px;text-align:center;color:var(--gray);font-size:.95rem}
+  @media (max-width:560px){header{flex-wrap:wrap;gap:8px;justify-content:center}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="./opi-logo.png" alt="OPI Construction" />
+      <a href="https://opiconstruction.com" target="_blank" rel="noopener">Return to OPIConstruction.com</a>
+    </header>
+
+    <div class="accent"></div>
+
+    <section class="card">
+      <h1>Project Intake — Mike</h1>
+      <p class="lead">Submit the opportunity details below. On submit, Buildertrend will create the lead.</p>
+
+      <div class="form-shell">
+        <!-- Buildertrend embed -->
+        <script async src="https://buildertrend.net/leads/contactforms/js/btClientContactForm.js"></script>
+        <iframe id="btIframe"
+          title="OPI Construction Contact Form (Buildertrend)"
+          src="https://buildertrend.net/leads/contactforms/ContactFormFrame.aspx?builderID=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJidWlsZGVySWQiOjEwOTAxM30.dRrmKk1eq_W7Qqzn0GVUm0fqFfCxk_zEvWImyX7BNzU"
+          scrolling="no" loading="lazy"></iframe>
+        <!-- /Buildertrend embed -->
+      </div>
+    </section>
+
+    <footer>
+      <strong>OPI Construction, Inc</strong><br>
+      210 Hudson Street, 8th Floor, Jersey City, NJ 07032 • Office <a href="tel:+18883718442">(888) 371-8442</a><br>
+      © <span id="y"></span> OPI Construction
+    </footer>
+  </div>
+
+<script>
+  // Year
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // Auto-append LeadSource=Mike Randazzoe to the iframe URL
+  (function(){
+    var iframe = document.getElementById('btIframe');
+    var u = new URL(iframe.src);
+    u.searchParams.set('LeadSource', 'Mike Randazzoe');
+    iframe.src = u.toString();
+  })();
+</script>
+</body>
+</html>
