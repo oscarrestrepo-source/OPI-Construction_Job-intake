@@ -3,56 +3,60 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>OPI – Internal Intake Portal</title>
+<title>OPI – Internal Project Intake (Team)</title>
 <link rel="icon" href="./opi-logo.png" type="image/png" />
+<meta name="description" content="Internal intake for new project opportunities at OPI Construction." />
 <style>
   :root{--opi:#E16C09;--ink:#222;--muted:#666;--bd:#e9eaee;--bg:#f6f7f9;--card:#fff}
-  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-  .wrap{max-width:900px;margin:28px auto;padding:16px}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+  .wrap{max-width:1000px;margin:28px auto;padding:16px}
   header{display:flex;gap:12px;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--bd);border-radius:14px;padding:12px 16px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
   header img{height:38px}
+  header a{color:var(--opi);text-decoration:none;font-weight:600}
   .accent{height:4px;width:84px;background:var(--opi);border-radius:3px;margin:16px auto 22px}
-  h1{margin:16px 0 6px;text-align:center;color:var(--opi)}
+  h1{margin:0 0 6px;text-align:center;color:var(--opi)}
   p.lead{text-align:center;color:var(--muted);margin:0 0 18px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-  .card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px;box-shadow:0 8px 28px rgba(0,0,0,.08);display:flex;flex-direction:column;gap:10px}
-  .btn{display:inline-block;text-align:center;padding:14px 16px;border-radius:10px;border:1px solid var(--bd);text-decoration:none;color:#fff;background:var(--opi);font-weight:700}
-  .btn.secondary{background:#fff;color:var(--opi)}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.08);padding:clamp(16px,3.5vw,28px)}
+  .iframe-shell{border:1px solid var(--bd);border-radius:12px;overflow:hidden;background:#fff}
+  iframe{width:100%;height:1100px;border:0;display:block}
+  .fallback{text-align:center;margin-top:10px}
+  .fallback a{color:var(--opi);text-decoration:none;font-weight:600}
   footer{text-align:center;color:var(--muted);margin:22px 0}
-  .small{font-size:.9rem;color:var(--muted)}
 </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <img src="./opi-logo.png" alt="OPI Construction" />
-      <a class="small" href="https://opiconstruction.com" target="_blank" rel="noopener">Return to OPIConstruction.com</a>
+      <div style="display:flex;gap:10px;align-items:center">
+        <img src="./opi-logo.png" alt="OPI Construction" />
+        <strong>OPI Construction – Internal Intake</strong>
+      </div>
+      <a href="https://opiconstruction.com" target="_blank" rel="noopener">Return to OPIConstruction.com</a>
     </header>
 
     <div class="accent" aria-hidden="true"></div>
-    <h1>Internal Project Intake</h1>
-    <p class="lead">Choose the lane below to start a new lead. Submissions create a Lead in Buildertrend.</p>
+    <h1>Team Project Intake</h1>
+    <p class="lead">Use this form to capture new opportunities. Submissions flow to the intake tracker and notifications.</p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Oliver</h3>
-        <p class="small">Use for opportunities you’re forwarding or initiating.</p>
-        <a class="btn" href="./oliver.html">Open Oliver’s Intake</a>
+    <section class="card">
+      <div class="iframe-shell">
+        <!-- Microsoft Forms embed -->
+        <iframe
+          src="https://forms.office.com/Pages/ResponsePage.aspx?id=oZJrg1FiVEWId0m4UM061yrjHGeMpUtOkJCgcoVyP0VUOVFXMldDMTJZSTZZVVIzWlQwMkxINTVQMC4u&embed=true"
+          frameborder="0" marginwidth="0" marginheight="0"
+          allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+        </iframe>
       </div>
-      <div class="card">
-        <h3>Mike</h3>
-        <p class="small">Use for opportunities you’re forwarding or initiating.</p>
-        <a class="btn" href="./mike.html">Open Mike’s Intake</a>
+      <div class="fallback">
+        If the form doesn’t load, <a
+          href="https://forms.office.com/Pages/ResponsePage.aspx?id=oZJrg1FiVEWId0m4UM061yrjHGeMpUtOkJCgcoVyP0VUOVFXMldDMTJZSTZZVVIzWlQwMkxINTVQMC4u"
+          target="_blank" rel="noopener">open it in a new tab</a>.
       </div>
-      <div class="card">
-        <h3>Team</h3>
-        <p class="small">Use for any other internal submitter.</p>
-        <a class="btn" href="./team.html">Open Team Intake</a>
-      </div>
-    </div>
+    </section>
 
     <footer>
-      <div>© <span id="y"></span> OPI Construction, Inc • (888) 371-8442 • 210 Hudson St, 8th Fl, Jersey City, NJ 07032</div>
+      © <span id="y"></span> OPI Construction, Inc • (888) 371-8442 • 210 Hudson St, 8th Fl, Jersey City, NJ 07032
     </footer>
   </div>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
