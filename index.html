@@ -1,70 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OPI Construction — Project Intake</title>
-  <link rel="icon" href="./opi-logo.png" type="image/png" />
-  <style>
-    :root{--opi-orange:#E16C09;--opi-gray-900:#222;--opi-gray-700:#555;--opi-gray-300:#e9eaee;--bg:#f6f7f9;--card:#fff}
-    *{box-sizing:border-box} html,body{height:100%}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--opi-gray-900);
-         background:radial-gradient(60rem 60rem at 10% -10%, rgba(225,108,9,.07), transparent 60%),
-                    radial-gradient(60rem 60rem at 110% 10%, rgba(225,108,9,.05), transparent 60%), var(--bg);}
-    .wrap{max-width:1100px;margin:24px auto;padding:16px}
-    header{background:#fff;border:1px solid var(--opi-gray-300);border-radius:12px;display:flex;gap:12px;align-items:center;
-           justify-content:space-between;padding:10px 16px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-    header img{height:40px}
-    header a{color:var(--opi-orange);text-decoration:none;font-weight:600}
-    .accent{height:4px;width:84px;background:var(--opi-orange);border-radius:3px;margin:12px auto 18px}
-    .card{background:var(--card);border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.08);
-          padding:clamp(16px,3.5vw,28px);margin:0 auto;max-width:900px;border:1px solid var(--opi-gray-300)}
-    h1{margin:0 0 6px;text-align:center;color:var(--opi-orange)}
-    p.lead{margin:0 0 18px;text-align:center;color:var(--opi-gray-700)}
-    .form-shell{border:1px solid var(--opi-gray-300);border-radius:12px;overflow:hidden;background:#fff}
-    iframe{width:100%;min-height:900px;border:0;display:block;background:transparent}
-    footer{max-width:900px;margin:18px auto 28px;color:var(--opi-gray-700);font-size:.95rem;text-align:center}
-    .muted{color:#888;font-size:.9rem}
-    @media (max-width:560px){header img{height:34px}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OPI – Internal Intake Portal</title>
+<link rel="icon" href="./opi-logo.png" type="image/png" />
+<style>
+  :root{--opi:#E16C09;--ink:#222;--muted:#666;--bd:#e9eaee;--bg:#f6f7f9;--card:#fff}
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+  .wrap{max-width:900px;margin:28px auto;padding:16px}
+  header{display:flex;gap:12px;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--bd);border-radius:14px;padding:12px 16px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  header img{height:38px}
+  .accent{height:4px;width:84px;background:var(--opi);border-radius:3px;margin:16px auto 22px}
+  h1{margin:16px 0 6px;text-align:center;color:var(--opi)}
+  p.lead{text-align:center;color:var(--muted);margin:0 0 18px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px;box-shadow:0 8px 28px rgba(0,0,0,.08);display:flex;flex-direction:column;gap:10px}
+  .btn{display:inline-block;text-align:center;padding:14px 16px;border-radius:10px;border:1px solid var(--bd);text-decoration:none;color:#fff;background:var(--opi);font-weight:700}
+  .btn.secondary{background:#fff;color:var(--opi)}
+  footer{text-align:center;color:var(--muted);margin:22px 0}
+  .small{font-size:.9rem;color:var(--muted)}
+</style>
 </head>
 <body>
-  <main class="wrap">
+  <div class="wrap">
     <header>
-      <img src="./opi-logo.png" alt="OPI Construction logo" onerror="this.style.display='none'">
-      <a href="https://opiconstruction.com" target="_blank" rel="noopener">Return to OPIConstruction.com</a>
+      <img src="./opi-logo.png" alt="OPI Construction" />
+      <a class="small" href="https://opiconstruction.com" target="_blank" rel="noopener">Return to OPIConstruction.com</a>
     </header>
 
     <div class="accent" aria-hidden="true"></div>
+    <h1>Internal Project Intake</h1>
+    <p class="lead">Choose the lane below to start a new lead. Submissions create a Lead in Buildertrend.</p>
 
-    <section class="card" aria-label="Contact form">
-      <h1>Project Intake Form</h1>
-      <p class="lead">Tell us about your project and we’ll get right back to you.</p>
-
-      <div class="form-shell">
-        <!-- ✅ Correct, embeddable Buildertrend combo -->
-        <script async src="https://buildertrend.net/leads/contactforms/js/btClientContactForm.js"></script>
-        <iframe
-          id="btIframe"
-          title="OPI Construction Contact Form (Buildertrend)"
-          src="https://buildertrend.net/leads/contactforms/ContactFormFrame.aspx?builderID=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJidWlsZGVySWQiOjEwOTAxM30.dRrmKk1eq_W7Qqzn0GVUm0fqFfCxk_zEvWImyX7BNzU"
-          loading="lazy"
-          scrolling="no">
-        </iframe>
-        <!-- /Buildertrend Contact Form -->
+    <div class="grid">
+      <div class="card">
+        <h3>Oliver</h3>
+        <p class="small">Use for opportunities you’re forwarding or initiating.</p>
+        <a class="btn" href="./oliver.html">Open Oliver’s Intake</a>
       </div>
-
-      <noscript>JavaScript is required to load the Buildertrend intake form.</noscript>
-    </section>
+      <div class="card">
+        <h3>Mike</h3>
+        <p class="small">Use for opportunities you’re forwarding or initiating.</p>
+        <a class="btn" href="./mike.html">Open Mike’s Intake</a>
+      </div>
+      <div class="card">
+        <h3>Team</h3>
+        <p class="small">Use for any other internal submitter.</p>
+        <a class="btn" href="./team.html">Open Team Intake</a>
+      </div>
+    </div>
 
     <footer>
-      <strong>OPI Construction, Inc</strong><br>
-      210 Hudson Street, 8th Floor, Jersey City, NJ 07032<br>
-      Office | <a href="tel:+18883718442">(888) 371-8442</a>
-      <div class="muted">© <span id="y"></span> OPI Construction • All rights reserved.</div>
+      <div>© <span id="y"></span> OPI Construction, Inc • (888) 371-8442 • 210 Hudson St, 8th Fl, Jersey City, NJ 07032</div>
     </footer>
-  </main>
-
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+  </div>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
