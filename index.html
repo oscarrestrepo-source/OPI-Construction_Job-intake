@@ -3,26 +3,25 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>OPI – Internal Project Intake (Team)</title>
+<title>OPI – Internal Project Intake</title>
 <link rel="icon" href="./opi-logo.png" type="image/png" />
-<meta name="description" content="Internal intake for new project opportunities at OPI Construction." />
+<meta name="description" content="OPI Construction internal portal for new project intake." />
 <style>
   :root{--opi:#E16C09;--ink:#222;--muted:#666;--bd:#e9eaee;--bg:#f6f7f9;--card:#fff}
   *{box-sizing:border-box}
   body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-  .wrap{max-width:1000px;margin:28px auto;padding:16px}
+  .wrap{max-width:900px;margin:28px auto;padding:16px}
   header{display:flex;gap:12px;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--bd);border-radius:14px;padding:12px 16px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
   header img{height:38px}
   header a{color:var(--opi);text-decoration:none;font-weight:600}
-  .accent{height:4px;width:84px;background:var(--opi);border-radius:3px;margin:16px auto 22px}
-  h1{margin:0 0 6px;text-align:center;color:var(--opi)}
-  p.lead{text-align:center;color:var(--muted);margin:0 0 18px}
-  .card{background:var(--card);border:1px solid var(--bd);border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.08);padding:clamp(16px,3.5vw,28px)}
-  .iframe-shell{border:1px solid var(--bd);border-radius:12px;overflow:hidden;background:#fff}
-  iframe{width:100%;height:1100px;border:0;display:block}
-  .fallback{text-align:center;margin-top:10px}
-  .fallback a{color:var(--opi);text-decoration:none;font-weight:600}
-  footer{text-align:center;color:var(--muted);margin:22px 0}
+  .accent{height:4px;width:84px;background:var(--opi);border-radius:3px;margin:16px auto 24px}
+  h1{margin:0 0 8px;text-align:center;color:var(--opi)}
+  p.lead{text-align:center;color:var(--muted);margin:0 0 24px}
+  .hero{background:#fff;border:1px solid var(--bd);border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.08);padding:28px;text-align:center}
+  .cta{display:inline-block;margin-top:6px;padding:16px 22px;border-radius:12px;border:1px solid var(--bd);background:var(--opi);color:#fff;text-decoration:none;font-weight:800;font-size:1.05rem}
+  .cta:hover{opacity:.95}
+  .help{margin-top:14px;color:var(--muted);font-size:.95rem}
+  footer{text-align:center;color:var(--muted);margin:26px 0}
 </style>
 </head>
 <body>
@@ -30,29 +29,18 @@
     <header>
       <div style="display:flex;gap:10px;align-items:center">
         <img src="./opi-logo.png" alt="OPI Construction" />
-        <strong>OPI Construction – Internal Intake</strong>
+        <strong>OPI Construction — Internal Portal</strong>
       </div>
       <a href="https://opiconstruction.com" target="_blank" rel="noopener">Return to OPIConstruction.com</a>
     </header>
 
     <div class="accent" aria-hidden="true"></div>
-    <h1>Team Project Intake</h1>
-    <p class="lead">Use this form to capture new opportunities. Submissions flow to the intake tracker and notifications.</p>
+    <h1>New Project Intake</h1>
+    <p class="lead">Use the button below to submit a new opportunity. Submissions route to the intake tracker and notifications.</p>
 
-    <section class="card">
-      <div class="iframe-shell">
-        <!-- Microsoft Forms embed -->
-        <iframe
-          src="https://forms.office.com/Pages/ResponsePage.aspx?id=oZJrg1FiVEWId0m4UM061yrjHGeMpUtOkJCgcoVyP0VUOVFXMldDMTJZSTZZVVIzWlQwMkxINTVQMC4u&embed=true"
-          frameborder="0" marginwidth="0" marginheight="0"
-          allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
-        </iframe>
-      </div>
-      <div class="fallback">
-        If the form doesn’t load, <a
-          href="https://forms.office.com/Pages/ResponsePage.aspx?id=oZJrg1FiVEWId0m4UM061yrjHGeMpUtOkJCgcoVyP0VUOVFXMldDMTJZSTZZVVIzWlQwMkxINTVQMC4u"
-          target="_blank" rel="noopener">open it in a new tab</a>.
-      </div>
+    <section class="hero">
+      <a class="cta" href="./team.html">Start Team Intake</a>
+      <div class="help">Having trouble? <a href="./team.html" style="color:#E16C09;text-decoration:none;font-weight:600">Open the intake form</a>.</div>
     </section>
 
     <footer>
